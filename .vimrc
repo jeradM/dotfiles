@@ -18,30 +18,27 @@ set rtp^=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'lanox/lanox-vim-theme'
-" Plugin 'limadm/vim-blues'
+Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'cohama/lexima.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'alvan/vim-closetag'
-Plugin 'itchyny/lightline.vim'
 Plugin 'tomtom/tcomment_vim'
 Bundle 'magarcia/vim-angular2-snippets'
 
 call vundle#end()
 filetype plugin indent on
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat'
-      \}
-
 map <Leader>m  :NERDTreeToggle<CR>
 
-colorscheme lanox
+colorscheme angr
+let g:airline_theme='deus'
 
 nnoremap <Leader>n :bnext<CR>
 nnoremap <Leader>p :bprevious<CR>
