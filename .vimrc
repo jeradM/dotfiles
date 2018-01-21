@@ -39,12 +39,18 @@ map <Leader>m  :NERDTreeToggle<CR>
 
 colorscheme angr
 let g:airline_theme='deus'
+let g:airline_powerline_fonts=1
 
 nnoremap <Leader>n :bnext<CR>
 nnoremap <Leader>p :bprevious<CR>
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-h> <C-w><C-h>
 
 set clipboard=unnamed
 set laststatus=2
