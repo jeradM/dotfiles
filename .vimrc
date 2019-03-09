@@ -1,8 +1,7 @@
 let mapleader=","
 
-syntax on
-
 set number
+set relativenumber
 set cindent
 
 set expandtab
@@ -12,34 +11,28 @@ set softtabstop=2
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 
 set nocompatible
-filetype off
+set clipboard=unnamed
 
-set rtp^=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+"Plug 'cohama/lexima.vim'
+Plug 'mattn/emmet-vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-repeat'
+Plug 'easymotion/vim-easymotion'
+call plug#end()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'rafi/awesome-vim-colorschemes'
-Plugin 'cohama/lexima.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'alvan/vim-closetag'
-Plugin 'tomtom/tcomment_vim'
-Bundle 'magarcia/vim-angular2-snippets'
+map <Leader>m :NERDTreeToggle<CR>
 
-call vundle#end()
-filetype plugin indent on
-
-map <Leader>m  :NERDTreeToggle<CR>
-
-colorscheme angr
-let g:airline_theme='deus'
-let g:airline_powerline_fonts=1
+set background=dark
+colorscheme palenight
+let g:lightline = {'colorscheme': 'palenight'}
+set laststatus=2
 
 nnoremap <Leader>n :bnext<CR>
 nnoremap <Leader>p :bprevious<CR>
@@ -52,5 +45,10 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-h> <C-w><C-h>
 
-set clipboard=unnamed
-set laststatus=2
+
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_upper = 1
+nmap <Leader><Leader> <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-s)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
