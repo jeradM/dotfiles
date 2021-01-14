@@ -25,6 +25,7 @@ Plug 'mattn/emmet-vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
+Plug 'chr4/nginx.vim'
 call plug#end()
 
 map <Leader>m :NERDTreeToggle<CR>
